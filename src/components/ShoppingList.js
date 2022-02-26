@@ -7,10 +7,17 @@ function ShoppingList({ items }) {
   function handleFilterChange(e){
     console.log(e);
     setSelectedCategory(e.target.value)
-    {filteredItems ? selectedCategory : "All"}
+    // {filteredItems ? selectedCategory : "All"}
+    console.log(selectedCategory)
   }
   // console.log(items);
-  const filteredItems = items.filter((item) => item.category === selectedCategory)
+  const filteredItems = items.filter((item) => {
+    if (selectedCategory === "All") return true
+    return item.category === selectedCategory
+  })
+
+
+    // (selectedCategory? "All" : filteredItems)
   // console.log(filteredItems);
     
   

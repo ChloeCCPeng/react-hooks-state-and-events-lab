@@ -12,7 +12,6 @@ function App() {
     setIsDarkMode((isDarkMode) => ! isDarkMode);
   }
 
-
   return (
     <div className={appClass}>
       <header>
